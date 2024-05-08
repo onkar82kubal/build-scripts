@@ -1,0 +1,15 @@
+{
+    "maintainer":"vinodk99",
+    "package_name" : "ordereddict",
+    "github_url": "https://github.com/ruamel/ordereddict",
+    "version": "0.4.15",
+    "default_branch": "master",
+    "package_dir": "r/ruamel-ordereddict",
+    "build_script": "ruamel-ordereddict_ubi_9.3.sh",
+    "validate_build_script": "true",
+    "use_non_root_user": "false",
+    "docker_build": false,
+    "0.4.15" : {
+       "build_script" : "ruamel-ordereddict_ubi_9.3.sh"
+    }
+}
