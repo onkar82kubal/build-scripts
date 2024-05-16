@@ -35,7 +35,6 @@ ln -s python2.7 python
 cd $HOME_DIR
 curl -v -O https://bootstrap.pypa.io/pip/2.7/get-pip.py -L
 python -m ensurepip --default-pip
-
 if ! git clone $PACKAGE_URL $PACKAGE_NAME; then
     	echo "------------------$PACKAGE_NAME:clone_fails---------------------------------------"
 		echo "$PACKAGE_URL $PACKAGE_NAME"
@@ -44,6 +43,7 @@ if ! git clone $PACKAGE_URL $PACKAGE_NAME; then
 fi
 cd $PACKAGE_NAME
 # pip install setuptools==19.2.3
+pip install ruamel.ordereddict
 git checkout $PACKAGE_VERSION
 if ! python setup.py install; then
     echo "------------------$PACKAGE_NAME:install_fails---------------------------------------"
